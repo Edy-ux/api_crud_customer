@@ -1,5 +1,5 @@
 import { ClientList } from './components/ClientList/ClientList';
-import { MyProvider } from './components/context/context';
+import { MyProvider } from './context/context';
 import NewClient from './components/NewClient/NewClient';
 
 function App() {

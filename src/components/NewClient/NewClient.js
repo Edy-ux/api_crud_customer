@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import '../../Login.css';
-import { MyContext } from '../context/context';
+import { MyContext } from '../../context/context';
 
 const NewClient = () => {
   const [email, setEmail] = useState('');

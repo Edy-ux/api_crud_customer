@@ -1,15 +1,13 @@
-import React, { useState, useEffect, useContext} from 'react';
+import React, { useContext } from 'react';
 import './ClientList.css';
-import trash from '../../assets/trash.svg'
+import trash from '../../assets/trash.svg';
 import Client from '../Client/Client';
-import { MyContext } from '../context/context';  
+import { MyContext } from '../../context/context';
 
 export const ClientList = () => {
-
-
-  const { getMerchant, merchants} = useContext(MyContext);  
+  const { getMerchant, merchants } = useContext(MyContext);
   // console.log(getMerchant);
- 
+
   return (
     <>
       <main class="container">
@@ -25,4 +23,3 @@ export const ClientList = () => {
     </>
   );
 };
-

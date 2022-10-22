@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import React from 'react';
-import { MyProvider } from './components/context/context';
+import { MyProvider } from './context/context';
 import App from './App';
 
 

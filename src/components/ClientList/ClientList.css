@@ -8,23 +8,13 @@
   --red: #e92929;
 }
 
-html * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/* Global -------------------------------*/
-body {
-  background: #f0f2f5;
-  font-family: 'Poppins', sans-serif;
-}
-
 .container {
-  width: min(98vw,1000px); /*estudar sobre min() */
+  /* width: min(98vw,1000px); */
   margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
 }
-
-/*\Titles--------------------------------- */
 
 h3,
 h2 {
@@ -39,7 +29,6 @@ h2 {
 }
 
 /* Links e botões ========================= */
-
 
 .button.cancel {
   width: 100%;
@@ -71,20 +60,8 @@ button:hover {
   border-radius: 0.2rem;
 }
 
-/* Balance -------------------------------- */
-
-
-/* table ===---------------------------¨*/
-
-#transaction {
-  display: block;
-  width: 100%;
-  overflow-x: auto;
-}
-
 #data-table {
-  
-  width: 100%;
+  width: 920px;
   border-spacing: 0 0.5rem;
   color: #4f5674;
 }
@@ -111,7 +88,6 @@ table thead th {
 
 table tbody tr {
   opacity: 0.85;
- 
 }
 
 table tbody tr:hover {
@@ -122,11 +98,4 @@ table tbody tr:hover {
 table tbody td {
   background: white;
   padding: 1rem 2rem;
-  
- 
 }
-
-/* td.descrition {
-  color: var(--dark-blue);
-}
- */
