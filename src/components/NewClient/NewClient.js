@@ -1,34 +1,17 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import '../../Login.css';
 import { MyContext } from '../../context/context';
 
 const NewClient = () => {
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
- 
-  const { getMerchant } = useContext(MyContext);
-
-
-
-  async function createMerchant(event) {
-    event.preventDefault();
-
-    await fetch('http://192.168.192.211:3002/merchants', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email, phone }),
-    })
-      .then((response) => {
-        return response.text();
-      })
-      .then((data) => {
-        alert(data);
-        getMerchant()
-      });
-  }
+  const {
+    name,
+    setName,
+    email,
+    setEmail,
+    phone,
+    setPhone,
+    createMerchant,
+  } = useContext(MyContext);
 
   return (
     <div className="login">
