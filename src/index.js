@@ -3,7 +3,6 @@ import React from 'react';
 import { MyProvider } from './context/context';
 import App from './App';
 
-
 const root = createRoot(document.querySelector('#root'));
 root.render(
   <MyProvider>

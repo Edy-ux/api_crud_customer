@@ -1,38 +1,42 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import '../../Login.css';
 import { MyContext } from '../../context/context';
 
 const NewClient = () => {
-  const {
-    name,
-    setName,
-    email,
-    setEmail,
-    phone,
-    setPhone,
-    createMerchant,
-  } = useContext(MyContext);
 
+  const { setFormData, formData, createMerchant } = useContext(MyContext);
+
+  const handleFormData = event => {
+    const { id, value } = event.target
+    setFormData((prevForm) => Object.assign({}, prevForm, { [id]: value }))
+  }
+
+  console.log(formData);
   return (
     <div className="login">
       <div className="login__container">
-        <h3>Novo cadastro</h3>
-        <form onSubmit={createMerchant}>
+        <h3>+ Add</h3>
+        <form onSubmit={createMerchant} name="loginForm">
           <center>
             <input
               type="text"
-              value={name}
+              value={formData?.name}
+              id='name'
               placeholder="Nome"
-              onChange={(e) => setName(e.target.value)}
+              onChange={handleFormData}
               required
+            // data-key='name'
             />
           </center>
           <center>
             <input
               type="text"
-              value={email}
+              value={formData?.email}
+              name="email"
+              id='email'
+              // data-key='email'
               placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleFormData}
               required
             />
           </center>
@@ -40,18 +44,22 @@ const NewClient = () => {
             <input
               type="text"
               placeholder="Telefone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              value={formData?.phone}
+              id='phone'
+              name="phone"
+              // data-key='phone'
+              onChange={handleFormData}
+              maxLength="14"
+
               required
             />
           </center>
 
           <center>
-            <button type="submit" class="login__login">
+            <button type="submit" className="login__login">
               Adicionar
             </button>
           </center>
-          <center></center>
         </form>
       </div>
     </div>

@@ -21,18 +21,16 @@ body {
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
-  align-items: center;
-
   border: 1px solid #dddfe2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
   height: 100vh;
-  width: 380px;
+  width: 330px;
   text-align: center;
-  padding-bottom: 0.5em;
+ 
 }
 
 .login__container > h3 {
-  margin-top: 3.2rem;
+  margin-top: 2.2rem;
   margin-bottom: 0.8rem;
   color: var(--dark-blue);
   font-size: 2.5rem;
@@ -57,43 +55,15 @@ input:focus {
   /*   background: #FFFFFF url(/rsrc.php/v3/yO/r/YQNfPR9MJfx.png) repeat-x; */
   border: 1px solid #dddfe2;
   color: #1c1e21;
-  line-height: 16px;
-  font-size: 17px;
+  line-height: 14px;
+  font-size: 14px;
   vertical-align: middle;
 }
 
 .login__container > form > center > input::-webkit-input-placeholder {
-  font-size: 15px;
+  font-size: 14px;
   color: rgba(128, 128, 128, 0.8);
   padding-left: 0px;
 }
 
-.login__login {
-  cursor: pointer;
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-  text-shadow: none;
-  vertical-align: middle;
-  font-weight: bold;
-  justify-content: center;
-  background-color: #8217d1;
-  border: none;
-  border-radius: 6px;
-  font-size: 20px;
-  line-height: 48px;
-  padding: 0 16px;
-  width: 303px;
-}
 
-.sideinfo {
-  display: flex;
-  flex-direction: column;
-}
-
-.sideinfo > h5 {
-  color: #1877f2;
-  font-family: Helvetica, sans-serif;
-  font-weight: 500;
-  cursor: pointer;
-}
